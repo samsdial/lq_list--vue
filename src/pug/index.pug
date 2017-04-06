@@ -1,5 +1,7 @@
 extends ./base/layout.pug
 
 block content
-    main.container
-        h2 hola mundo
+    main#app.container
+        h2 {{ nombre + ' ' + apellido | capitalize }}
+        h2(v-if="!auth") Heading
+        a(v-bind:href="dirrecion", @click="accion", target="_blanck") enlance

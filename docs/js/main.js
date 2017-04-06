@@ -1,1 +1,1 @@
-$(function(){});
+new Vue({el:"#app",data:{nombre:"sergio",apellido:"martinez",auth:!1,dirrecion:"http://www.lequar.es"},methods:{accion:function(e){e.preventDefault(),alert("Click")}}});
