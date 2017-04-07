@@ -1,15 +1,27 @@
 new Vue ({
     el: '#app',
     data: {
-        nombre: 'sergio',
-        apellido: 'martinez',
-        auth: false,
-        dirrecion: 'http://www.lequar.es'
+        nuevaTarea: null,
+        editandoTarea: null,
+        tareas: [
+            {titulo: 'salir a comer', completado: false},
+            {titulo: 'Correr', completado: false},
+            {titulo: 'Comprar', completado: false},
+            {titulo: 'Estudiar', completado: false},
+        ]
     },
     methods: {
-        accion: function (_evt) {
-            _evt.preventDefault();
-            alert('Click');
+        agregarTarea: function (tarea) {
+            this.tareas.unshift({
+                    titulo: tarea, completado: false
+            });
+            this.nuevaTarea = '';
+        },
+        editarTarea: function(tarea) {
+            console.info(tarea);
+        },
+        eliminarTarea: function(indice) {
+            this.tareas.splice(indice, 1)
         }
     }
 });

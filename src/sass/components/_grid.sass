@@ -15,7 +15,10 @@ section.Grid-cell
     position: relative
 .content
     padding: .8rem 1rem 0
-    margin-bottom: 1rem
+    margin-bottom: 2rem
+    border: 1px solid $silver
+    background-color: $white
+    border-radius: 3px
     &:after
         content: ""
         display: block
@@ -227,5 +230,5 @@ $gutter: 1rem
 .container
     max-width: 1200px
     +MQ(M)
-        max-width: 1200px
+        max-width: 600px
         margin: auto

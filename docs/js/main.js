@@ -1,1 +1,1 @@
-new Vue({el:"#app",data:{nombre:"sergio",apellido:"martinez",auth:!1,dirrecion:"http://www.lequar.es"},methods:{accion:function(e){e.preventDefault(),alert("Click")}}});
+new Vue({el:"#app",data:{nuevaTarea:null,editandoTarea:null,tareas:[{titulo:"salir a comer",completado:!1},{titulo:"Correr",completado:!1},{titulo:"Comprar",completado:!1},{titulo:"Estudiar",completado:!1}]},methods:{agregarTarea:function(a){this.tareas.unshift({titulo:a,completado:!1}),this.nuevaTarea=""},editarTarea:function(a){console.info(a)},eliminarTarea:function(a){this.tareas.splice(a,1)}}});
